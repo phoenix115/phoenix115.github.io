@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>ex5b_R4_ospf single area | Phoenix&#39;s Blog</title>
+  <title>ex6_RIPng | Phoenix&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="ex5b_R4_ospf single area
+  <meta name="description" content="ex6_RIPng
 Router">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ex5b_R4_ospf single area">
-<meta property="og:url" content="https://phoenix115.github.io/2017/03/28/ex5b_R4_ospf single area/index.html">
+<meta property="og:title" content="ex6_RIPng">
+<meta property="og:url" content="https://phoenix115.github.io/2017/04/11/ex6_RIPng/index.html">
 <meta property="og:site_name" content="Phoenix's Blog">
-<meta property="og:description" content="ex5b_R4_ospf single area
+<meta property="og:description" content="ex6_RIPng
 Router">
-<meta property="og:updated_time" content="2017-03-28T16:09:36.555Z">
+<meta property="og:updated_time" content="2017-04-11T15:49:53.186Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ex5b_R4_ospf single area">
-<meta name="twitter:description" content="ex5b_R4_ospf single area
+<meta name="twitter:title" content="ex6_RIPng">
+<meta name="twitter:description" content="ex6_RIPng
 Router">
   
     <link rel="alternative" href="/atom.xml" title="Phoenix&#39;s Blog" type="application/atom+xml">
@@ -216,11 +216,11 @@ Router">
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-ex5b_R4_ospf single area" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-ex6_RIPng" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/03/28/ex5b_R4_ospf single area/" class="article-date">
-      <time datetime="2017-03-28T13:16:53.333Z" itemprop="datePublished">2017-03-28</time>
+      <a href="/2017/04/11/ex6_RIPng/" class="article-date">
+      <time datetime="2017-04-11T15:49:53.137Z" itemprop="datePublished">2017-04-11</time>
 </a>
     </div>
   
@@ -233,7 +233,7 @@ Router">
         
   
     <h1 class="article-title" itemprop="name">
-      ex5b_R4_ospf single area
+      ex6_RIPng
     </h1>
   
 
@@ -248,7 +248,7 @@ Router">
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CCNA/">CCNA</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cisco/">Cisco</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/OSPF/">OSPF</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/R-S/">R&S</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CCNA/">CCNA</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cisco/">Cisco</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/R-S/">R&S</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RIPng/">RIPng</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -258,12 +258,12 @@ Router">
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><a href="https://phoenix115.github.io/2017/03/28/ex5b_R4_ospf single area/">ex5b_R4_ospf single area</a></p>
+        <p><a href="https://phoenix115.github.io/2017/04/11/ex6_RIPng/">ex6_RIPng</a></p>
 <h2 id="Router"><a href="#Router" class="headerlink" title="Router"></a>Router</h2><a id="more"></a>
-<h3 id="RA"><a href="#RA" class="headerlink" title="RA"></a>RA</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">enable</span></div><div class="line">configure terminal</div><div class="line">hostname RA</div><div class="line">no ip domain-lookup</div><div class="line">line console 0</div><div class="line">password cisco</div><div class="line">login</div><div class="line"><span class="built_in">exit</span></div><div class="line">line vty 0 4</div><div class="line">password cisco</div><div class="line">transport input ssh</div><div class="line">login <span class="built_in">local</span></div><div class="line"><span class="built_in">exit</span></div><div class="line"><span class="built_in">enable</span> secret ccna</div><div class="line">service password-encryption</div><div class="line">interface fa 0/1</div><div class="line">ip address 200.8.1.1 255.255.255.0</div><div class="line">no shutdown</div><div class="line">interface se 0/2/0</div><div class="line">ip address 20.255.8.2 255.255.255.248</div><div class="line">clock rate 1000000</div><div class="line">no shutdown</div><div class="line">interface fa 1/0</div><div class="line">ip address 88.88.88.1 255.255.255.128</div><div class="line">no shutdown</div><div class="line"><span class="built_in">exit</span></div><div class="line">router ospf 208</div><div class="line">router-id 1.1.1.1</div><div class="line">network 200.8.1.0 0.0.0.255 area 08</div><div class="line">network 20.255.8.2 0.0.0.7 area 08</div><div class="line">network 88.88.88.1 0.0.0.127 area 08</div><div class="line"><span class="built_in">exit</span></div><div class="line"><span class="built_in">exit</span></div><div class="line">copy r s</div></pre></td></tr></table></figure>
-<h3 id="RB"><a href="#RB" class="headerlink" title="RB"></a>RB</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">enable</span></div><div class="line">configure terminal</div><div class="line">hostname RB</div><div class="line">no ip domain-lookup</div><div class="line">line console 0</div><div class="line">password cisco</div><div class="line">login</div><div class="line"><span class="built_in">exit</span></div><div class="line">line vty 0 4</div><div class="line">password cisco</div><div class="line">transport input ssh</div><div class="line">login <span class="built_in">local</span></div><div class="line"><span class="built_in">exit</span></div><div class="line"><span class="built_in">enable</span> secret ccna</div><div class="line">service password-encryption</div><div class="line">interface fa 0/1</div><div class="line">ip address 200.8.2.1 255.255.255.0</div><div class="line">no shutdown</div><div class="line">interface se 0/2/0</div><div class="line">ip address 20.255.8.3 255.255.255.248</div><div class="line">clock rate 1000000</div><div class="line">no shutdown</div><div class="line">interface fa 1/1</div><div class="line">ip address 20.255.8.19 255.255.255.248</div><div class="line">no shutdown</div><div class="line">interface fa 0/0</div><div class="line">ip address 20.255.8.33 255.255.255.248</div><div class="line">no shutdown</div><div class="line"><span class="built_in">exit</span></div><div class="line">router ospf 208</div><div class="line">router-id 1.1.1.2</div><div class="line">network 200.8.2.0 0.0.0.255 area 08</div><div class="line">network 20.255.8.3 0.0.0.7 area 08</div><div class="line">network 20.255.8.19 0.0.0.7 area 08</div><div class="line">network 20.255.8.33 0.0.0.7 area 08</div><div class="line"><span class="built_in">exit</span></div><div class="line"><span class="built_in">exit</span></div><div class="line">copy r s</div></pre></td></tr></table></figure>
-<h3 id="RC"><a href="#RC" class="headerlink" title="RC"></a>RC</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">enable</span></div><div class="line">configure terminal</div><div class="line">hostname RC</div><div class="line">no ip domain-lookup</div><div class="line">line console 0</div><div class="line">password cisco</div><div class="line">login</div><div class="line"><span class="built_in">exit</span></div><div class="line">line vty 0 4</div><div class="line">password cisco</div><div class="line">transport input ssh</div><div class="line">login <span class="built_in">local</span></div><div class="line"><span class="built_in">exit</span></div><div class="line"><span class="built_in">enable</span> secret ccna</div><div class="line">service password-encryption</div><div class="line">interface fa 0/1</div><div class="line">ip address 200.8.3.1 255.255.255.0</div><div class="line">no shutdown</div><div class="line">interface se 0/1/0</div><div class="line">ip address 20.255.8.25 255.255.255.248</div><div class="line">clock rate 1000000</div><div class="line">no shutdown</div><div class="line">interface fa 1/0</div><div class="line">ip address 88.88.88.2 255.255.255.128</div><div class="line">no shutdown</div><div class="line">interface fa 1/1</div><div class="line">ip address 20.255.8.18 255.255.255.248</div><div class="line">no shutdown</div><div class="line"><span class="built_in">exit</span></div><div class="line">router ospf 208</div><div class="line">router-id 1.1.1.3</div><div class="line">network 200.8.3.0 0.0.0.255 area 08</div><div class="line">network 20.255.8.18 0.0.0.7 area 08</div><div class="line">network 20.255.8.25 0.0.0.7 area 08</div><div class="line">network 88.88.88.2 0.0.0.127 area 08</div><div class="line"><span class="built_in">exit</span></div><div class="line"><span class="built_in">exit</span></div><div class="line">copy r s</div></pre></td></tr></table></figure>
-<h3 id="RD"><a href="#RD" class="headerlink" title="RD"></a>RD</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">enable</span></div><div class="line">configure terminal</div><div class="line">hostname RD</div><div class="line">no ip domain-lookup</div><div class="line">line console 0</div><div class="line">password cisco</div><div class="line">login</div><div class="line"><span class="built_in">exit</span></div><div class="line">line vty 0 4</div><div class="line">password cisco</div><div class="line">transport input ssh</div><div class="line">login <span class="built_in">local</span></div><div class="line"><span class="built_in">exit</span></div><div class="line"><span class="built_in">enable</span> secret ccna</div><div class="line">service password-encryption</div><div class="line">interface fa 0/1</div><div class="line">ip address 200.8.4.1 255.255.255.0</div><div class="line">no shutdown</div><div class="line">interface fa 1/1</div><div class="line">ip address 88.88.88.3 255.255.255.128</div><div class="line">no shutdown</div><div class="line">interface se 0/0</div><div class="line">ip address 20.255.8.26 255.255.255.248</div><div class="line">clock rate 1000000</div><div class="line">no shutdown</div><div class="line">interface fa 0/0</div><div class="line">ip address 20.255.8.34 255.255.255.248</div><div class="line">no shutdown</div><div class="line"><span class="built_in">exit</span></div><div class="line">router ospf 208</div><div class="line">router-id 1.1.1.4</div><div class="line">network 200.8.4.0 0.0.0.255 area 08</div><div class="line">network 20.255.8.26 0.0.0.7 area 08</div><div class="line">network 20.255.8.34 0.0.0.7 area 08</div><div class="line"></div><div class="line"><span class="built_in">exit</span></div><div class="line"><span class="built_in">exit</span></div><div class="line">copy r s</div></pre></td></tr></table></figure>
+<h3 id="RA"><a href="#RA" class="headerlink" title="RA"></a>RA</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">enable</span></div><div class="line">configure terminal</div><div class="line">hostname RA</div><div class="line">ipv6 unicast-routing</div><div class="line">ipv6 router rip MYRIP</div><div class="line"><span class="built_in">exit</span></div><div class="line">interface fa 0/0</div><div class="line">ipv6 address 2014:8::9999:9999:1/96</div><div class="line">ipv6 rip MYRIP <span class="built_in">enable</span></div><div class="line">no shutdown</div><div class="line">interface fa 0/1</div><div class="line">ipv6 address 2017:8:a::1/64</div><div class="line">ipv6 rip MYRIP <span class="built_in">enable</span></div><div class="line">no shutdown</div><div class="line">interface fa 1/0</div><div class="line">ipv6 address 2017:8:FFFF::FFFF:9/125</div><div class="line">ipv6 rip MYRIP <span class="built_in">enable</span></div><div class="line">no shutdown</div><div class="line">interface se 0/2/0</div><div class="line">ipv6 address 2017:8:FFFF::FFFF:1/125</div><div class="line">ipv6 rip MYRIP <span class="built_in">enable</span></div><div class="line">clock rate 1000000</div><div class="line">no shutdown</div><div class="line"><span class="built_in">exit</span></div><div class="line"><span class="built_in">exit</span></div><div class="line">copy r s</div></pre></td></tr></table></figure>
+<h3 id="RB"><a href="#RB" class="headerlink" title="RB"></a>RB</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">enable</span></div><div class="line">configure terminal</div><div class="line">hostname RB</div><div class="line">ipv6 unicast-routing</div><div class="line">ipv6 router rip MYRIP</div><div class="line"><span class="built_in">exit</span></div><div class="line">interface fa 0/0</div><div class="line">ipv6 address  2017:8:FFFF::FFFF:21/125</div><div class="line">ipv6 rip MYRIP <span class="built_in">enable</span></div><div class="line">no shutdown</div><div class="line">interface fa 0/1</div><div class="line">ipv6 address 2017:8:b::1/64</div><div class="line">ipv6 rip MYRIP <span class="built_in">enable</span></div><div class="line">no shutdown</div><div class="line">interface fa 1/1</div><div class="line">ipv6 address 2017:8:FFFF::FFFF:11/125</div><div class="line">ipv6 rip MYRIP <span class="built_in">enable</span></div><div class="line">no shutdown</div><div class="line">interface se 0/2/0</div><div class="line">ipv6 address 2017:8:FFFF::FFFF:2/125</div><div class="line">ipv6 rip MYRIP <span class="built_in">enable</span></div><div class="line">clock rate 1000000</div><div class="line">no shutdown</div><div class="line"><span class="built_in">exit</span></div><div class="line"><span class="built_in">exit</span></div><div class="line">copy r s</div></pre></td></tr></table></figure>
+<h3 id="RC"><a href="#RC" class="headerlink" title="RC"></a>RC</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">enable</span></div><div class="line">configure terminal</div><div class="line">hostname RC</div><div class="line">ipv6 unicast-routing</div><div class="line">ipv6 router rip MYRIP</div><div class="line"><span class="built_in">exit</span></div><div class="line">interface fa 1/0</div><div class="line">ipv6 address 2017:8:FFFF::FFFF:A/125</div><div class="line">ipv6 rip MYRIP <span class="built_in">enable</span></div><div class="line">no shutdown</div><div class="line">interface fa 0/1</div><div class="line">ipv6 address 2017:8:c::1/64</div><div class="line">ipv6 rip MYRIP <span class="built_in">enable</span></div><div class="line">no shutdown</div><div class="line">interface fa 1/1</div><div class="line">ipv6 address 2017:8:FFFF::FFFF:12/125</div><div class="line">ipv6 rip MYRIP <span class="built_in">enable</span></div><div class="line">no shutdown</div><div class="line">interface se 0/1/0</div><div class="line">ipv6 address 2017:8:FFFF::FFFF:19/125</div><div class="line">ipv6 rip MYRIP <span class="built_in">enable</span></div><div class="line">clock rate 1000000</div><div class="line">no shutdown</div><div class="line"><span class="built_in">exit</span></div><div class="line"><span class="built_in">exit</span></div><div class="line">copy r s</div></pre></td></tr></table></figure>
+<h3 id="RD"><a href="#RD" class="headerlink" title="RD"></a>RD</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">enable</span></div><div class="line">configure terminal</div><div class="line">hostname RD</div><div class="line">ipv6 unicast-routing</div><div class="line">ipv6 router rip MYRIP</div><div class="line"><span class="built_in">exit</span></div><div class="line">interface fa 0/0</div><div class="line">ipv6 address 2017:8:d::1/64</div><div class="line">ipv6 rip MYRIP <span class="built_in">enable</span></div><div class="line">no shutdown</div><div class="line">interface fa 0/1</div><div class="line">ipv6 address 2017:8:FFFF::FFFF:22/125</div><div class="line">ipv6 rip MYRIP <span class="built_in">enable</span></div><div class="line">no shutdown</div><div class="line">interface se 0/2/0</div><div class="line">ipv6 address 2017:8:FFFF::FFFF:1A/125</div><div class="line">ipv6 rip MYRIP <span class="built_in">enable</span></div><div class="line">clock rate 1000000</div><div class="line">no shutdown</div><div class="line"><span class="built_in">exit</span></div><div class="line"><span class="built_in">exit</span></div><div class="line">copy r s</div></pre></td></tr></table></figure>
 
       
       
@@ -273,13 +273,13 @@ Router">
   
     
     <div class="copyright">
-        <p><span>本文標題 : </span><a href="/2017/03/28/ex5b_R4_ospf single area/">ex5b_R4_ospf single area</a></p>
+        <p><span>本文標題 : </span><a href="/2017/04/11/ex6_RIPng/">ex6_RIPng</a></p>
         <p><span>文章作者 : </span><a href="/" title="前往 Phoenix 的個人博客">Phoenix</a></p>
-        <p><span>發布時間 : </span>2017年03月28日 - 21時16分</p>
-        <p><span>最後更新 : </span>2017年03月29日 - 00時09分</p>
+        <p><span>發布時間 : </span>2017年04月11日 - 23時49分</p>
+        <p><span>最後更新 : </span>2017年04月11日 - 23時49分</p>
         <p>
-            <span>原文連結 : </span><a class="post-url" href="/2017/03/28/ex5b_R4_ospf single area/" title="ex5b_R4_ospf single area">https://phoenix115.github.io/2017/03/28/ex5b_R4_ospf single area/</a>
-            <span class="copy-path" data-clipboard-text="原文: https://phoenix115.github.io/2017/03/28/ex5b_R4_ospf single area/　　作者: Phoenix" title="點擊複製文章連結"><i class="fa fa-clipboard"></i></span>
+            <span>原文連結 : </span><a class="post-url" href="/2017/04/11/ex6_RIPng/" title="ex6_RIPng">https://phoenix115.github.io/2017/04/11/ex6_RIPng/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://phoenix115.github.io/2017/04/11/ex6_RIPng/　　作者: Phoenix" title="點擊複製文章連結"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -295,18 +295,9 @@ Router">
 
 <nav id="article-nav">
   
-    <a href="/2017/04/11/ex6_RIPng/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          ex6_RIPng
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/03/28/ex4b_R4_eigrp/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">ex4b_R4_eigrp</div>
+    <a href="/2017/03/28/ex5b_R4_ospf single area/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ex5b_R4_ospf single area</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -370,13 +361,11 @@ Router">
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/04/11/ex6_RIPng/" title="上一篇: ex6_RIPng">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主頁"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2017/03/28/ex4b_R4_eigrp/" title="下一篇: ex4b_R4_eigrp">
+            <a href="/2017/03/28/ex5b_R4_ospf single area/" title="下一篇: ex5b_R4_ospf single area">
                 <i class="fa fa-angle-right"></i>
             </a>
         
