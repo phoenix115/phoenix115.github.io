@@ -2918,7 +2918,7 @@ color
   color: #fff;
 }
 .copyright:hover p .copy-path::after {
-  content: "複製";
+  content: "复制";
 }
 .copyright .post-url:hover {
   font-weight: normal;
