@@ -5,18 +5,18 @@
   
   <title>ex8s_VLAN_Trunk | Phoenix&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="ex8s_VLAN_Trunkl
+  <meta name="description" content="ex8s_VLAN_Trunk
 Router">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ex8s_VLAN_Trunk">
 <meta property="og:url" content="https://phoenix115.github.io/2017/05/27/ex8s_VLAN_Trunk/index.html">
 <meta property="og:site_name" content="Phoenix's Blog">
-<meta property="og:description" content="ex8s_VLAN_Trunkl
+<meta property="og:description" content="ex8s_VLAN_Trunk
 Router">
-<meta property="og:updated_time" content="2017-05-27T04:53:21.254Z">
+<meta property="og:updated_time" content="2017-05-27T05:25:57.141Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ex8s_VLAN_Trunk">
-<meta name="twitter:description" content="ex8s_VLAN_Trunkl
+<meta name="twitter:description" content="ex8s_VLAN_Trunk
 Router">
   
     <link rel="alternative" href="/atom.xml" title="Phoenix&#39;s Blog" type="application/atom+xml">
@@ -143,7 +143,7 @@ Router">
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/CCNA/" style="font-size: 20px;">CCNA</a> <a href="/tags/Cisco/" style="font-size: 20px;">Cisco</a> <a href="/tags/DHCP-byRouter/" style="font-size: 10px;">DHCP_byRouter</a> <a href="/tags/EIGRP/" style="font-size: 10px;">EIGRP</a> <a href="/tags/EtherChannel/" style="font-size: 13.33px;">EtherChannel</a> <a href="/tags/GitHub/" style="font-size: 10px;">GitHub</a> <a href="/tags/Google/" style="font-size: 10px;">Google</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/I-O/" style="font-size: 10px;">I/O</a> <a href="/tags/OSPF/" style="font-size: 10px;">OSPF</a> <a href="/tags/R-S/" style="font-size: 20px;">R&S</a> <a href="/tags/RIP/" style="font-size: 10px;">RIP</a> <a href="/tags/RIPng/" style="font-size: 10px;">RIPng</a> <a href="/tags/Trunk/" style="font-size: 10px;">Trunk</a> <a href="/tags/VLAN/" style="font-size: 16.67px;">VLAN</a> <a href="/tags/io17/" style="font-size: 10px;">io17</a>
+                        <a href="/tags/CCNA/" style="font-size: 20px;">CCNA</a> <a href="/tags/Cisco/" style="font-size: 20px;">Cisco</a> <a href="/tags/DHCP-byRouter/" style="font-size: 10px;">DHCP_byRouter</a> <a href="/tags/DHCP-byServer/" style="font-size: 10px;">DHCP_byServer</a> <a href="/tags/EIGRP/" style="font-size: 10px;">EIGRP</a> <a href="/tags/EtherChannel/" style="font-size: 13.33px;">EtherChannel</a> <a href="/tags/GitHub/" style="font-size: 10px;">GitHub</a> <a href="/tags/Google/" style="font-size: 10px;">Google</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/I-O/" style="font-size: 10px;">I/O</a> <a href="/tags/OSPF/" style="font-size: 10px;">OSPF</a> <a href="/tags/R-S/" style="font-size: 20px;">R&S</a> <a href="/tags/RIP/" style="font-size: 10px;">RIP</a> <a href="/tags/RIPng/" style="font-size: 10px;">RIPng</a> <a href="/tags/Trunk/" style="font-size: 13.33px;">Trunk</a> <a href="/tags/VLAN/" style="font-size: 16.67px;">VLAN</a> <a href="/tags/io17/" style="font-size: 10px;">io17</a>
                     </div>
                 </section>
                 
@@ -258,7 +258,7 @@ Router">
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><a href="https://phoenix115.github.io/2017/05/27/ex8s_VLAN_Trunk/">ex8s_VLAN_Trunkl</a></p>
+        <p><a href="https://phoenix115.github.io/2017/05/27/ex8s_VLAN_Trunk/">ex8s_VLAN_Trunk</a></p>
 <h2 id="Router"><a href="#Router" class="headerlink" title="Router"></a>Router</h2><a id="more"></a>
 <h3 id="RL"><a href="#RL" class="headerlink" title="RL"></a>RL</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">enable</span></div><div class="line">configure terminal</div><div class="line">hostname RL</div><div class="line">interface GigabitEthernet 0/0</div><div class="line">no shutdown</div><div class="line">interface GigabitEthernet 0/0.11</div><div class="line">encapsulation dot1Q 11</div><div class="line">ip address 77. xy.11.254 255.255.255.0</div><div class="line">interface GigabitEthernet 0/0.51</div><div class="line">encapsulation dot1Q 51</div><div class="line">ip address 77. xy.51.254 255.255.255.0</div><div class="line">interface Serial0/0/0</div><div class="line">ip address 192.168.255.1 255.255.255.0</div><div class="line">clock rate 1000000</div><div class="line">no shutdown</div><div class="line">router ospf 5xy</div><div class="line">network 192.168.255.0 0.0.0.255 area 5xy</div><div class="line">network 77. xy.11.0 0.0.0.255 area 5xy</div><div class="line">network 77. xy.51.0 0.0.0.255 area 5xy</div><div class="line"><span class="built_in">exit</span></div><div class="line"><span class="built_in">exit</span></div><div class="line">running-config startup-config</div></pre></td></tr></table></figure>
 <h3 id="RR"><a href="#RR" class="headerlink" title="RR"></a>RR</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">enable</span></div><div class="line">configure terminal</div><div class="line">hostname RR</div><div class="line">interface GigabitEthernet 0/0</div><div class="line">no shutdown</div><div class="line">interface GigabitEthernet 0/0.31</div><div class="line">encapsulation dot1Q 31</div><div class="line">ip address 77.xy.31.254 255.255.255.0</div><div class="line">interface GigabitEthernet 0/0.41</div><div class="line">encapsulation dot1Q 41</div><div class="line">ip address 77. xy.41.254 255.255.255.0</div><div class="line">interface Serial0/0/0</div><div class="line">ip address 192.168.255.2 255.255.255.0</div><div class="line">clock rate 1000000</div><div class="line">no shutdown</div><div class="line">router ospf 5xy</div><div class="line">network 192.168.255.0 0.0.0.255 area 5xy</div><div class="line">network 77. xy.31.0 0.0.0.255 area 5xy</div><div class="line">network 77. xy.41.0 0.0.0.255 area 5xy</div><div class="line"><span class="built_in">exit</span></div><div class="line"><span class="built_in">exit</span></div><div class="line">running-config startup-config</div></pre></td></tr></table></figure>
@@ -276,7 +276,7 @@ Router">
         <p><span>本文標題 : </span><a href="/2017/05/27/ex8s_VLAN_Trunk/">ex8s_VLAN_Trunk</a></p>
         <p><span>文章作者 : </span><a href="/" title="前往 Phoenix 的個人博客">Phoenix</a></p>
         <p><span>發布時間 : </span>2017年05月27日 - 12時39分</p>
-        <p><span>最後更新 : </span>2017年05月27日 - 12時53分</p>
+        <p><span>最後更新 : </span>2017年05月27日 - 13時25分</p>
         <p>
             <span>原文連結 : </span><a class="post-url" href="/2017/05/27/ex8s_VLAN_Trunk/" title="ex8s_VLAN_Trunk">https://phoenix115.github.io/2017/05/27/ex8s_VLAN_Trunk/</a>
             <span class="copy-path" data-clipboard-text="原文: https://phoenix115.github.io/2017/05/27/ex8s_VLAN_Trunk/　　作者: Phoenix" title="點擊複製文章連結"><i class="fa fa-clipboard"></i></span>
@@ -381,7 +381,7 @@ Router">
             </a>
         
     </div>
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/05/27/ex9a_R4_DHCP_byRouter/">ex9a_R4_DHCP_byRouter</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/27/ex8s_VLAN_Trunk/">ex8s_VLAN_Trunk</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/27/ex8b_VLAN_EC/">ex8b_VLAN_EC</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/17/Google I O 2017 – io17/">Google I/O 2017 – io17</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/03/ex7c_VLAN + EtherChannel/">ex7c_VLAN + EtherChannel</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/11/ex6_RIPng/">ex6_RIPng</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/28/ex5b_R4_ospf single area/">ex5b_R4_ospf single area</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/28/ex4b_R4_eigrp/">ex4b_R4_eigrp</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/21/ex3b_R4_rip/">ex3b_R4_rip</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/01/hello-world/">Hello World</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/05/27/ex9c_VLAN_Trunk/">ex9c_VLAN_Trunk</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/27/ex9b_R4_DHCP_byServer/">ex9b_R4_DHCP_byServer</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/27/ex9a_R4_DHCP_byRouter/">ex9a_R4_DHCP_byRouter</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/27/ex8s_VLAN_Trunk/">ex8s_VLAN_Trunk</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/27/ex8b_VLAN_EC/">ex8b_VLAN_EC</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/17/Google I O 2017 – io17/">Google I/O 2017 – io17</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/03/ex7c_VLAN + EtherChannel/">ex7c_VLAN + EtherChannel</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/11/ex6_RIPng/">ex6_RIPng</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/28/ex5b_R4_ospf single area/">ex5b_R4_ospf single area</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/28/ex4b_R4_eigrp/">ex4b_R4_eigrp</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/21/ex3b_R4_rip/">ex3b_R4_rip</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/01/hello-world/">Hello World</a></li></ul>
     <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
     <script>
         $(".post-list").addClass("toc-article");
